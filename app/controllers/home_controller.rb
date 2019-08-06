@@ -1,6 +1,4 @@
-class UsersController < ApplicationController
-
-   before_action :set_user, only: [:edit, :update, :show]
+class HomeController < ApplicationController
 
    def index
       @brands = Brand.all
@@ -23,7 +21,6 @@ class UsersController < ApplicationController
    end
 
    def update
-     byebug
      @user.update(post_params)
      redirect_to @user
    end

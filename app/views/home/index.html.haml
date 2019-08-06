@@ -1,0 +1,11 @@
+%h1 I am looking for
+%h2 Manufacturer:
+%select
+   - @brands.each do |brand|
+      %option{value: brand.name }
+         = brand.name
+%h2 Weight:
+%select
+   - @weights.each do |weight|
+      %option{value: weight.amount }
+         = weight.amount
